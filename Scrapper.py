@@ -45,7 +45,7 @@ class scrapper:
             text=text+s['name']
             for lesson in s['lessons']:
                 text=text+lesson['name']+' : '+str(lesson['grade'])+" : "+str(lesson['score'])+'\n'
-        text='\n \n'+'Developed by HFM'+'\n'
+        text+='\n \n'+'Developed by HFM'+'\n'
         return text  
 if __name__=='__main__':
     ss=scrapper(open('res.html', 'r').read())

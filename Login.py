@@ -2,9 +2,9 @@ import requests
 import spidermonkey
 class login:
     host='http://erp.pgu.ac.ir'
-    def __init__(self, userName, password):
-        self.userName=userName
-        self.password=password
+    def __init__(self, up_list):
+        self.userName=up_list[0]
+        self.password=up_list[1]
     def getPayload(self, type, num):
         if  type.upper() == "TAB":
             return {'Command':'GET_TAB_INFO:'+num, 'userPosition':'undefined'}
